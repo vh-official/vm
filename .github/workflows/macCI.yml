@@ -23,7 +23,7 @@ jobs:
           sudo dscl . -passwd /Users/runneradmin Techgay11
           sudo dscl . -append /Groups/admin GroupMembership runneradmin
       - name: Create Tunnel
-        run: open -a Terminal.app ./ngrok tcp 3389
+        run: open -a Terminal.app "./ngrok tcp 3389"
       - name: Timeout
         run: echo "sleep 36000" >> time.sh
       - name: Keep Alive
