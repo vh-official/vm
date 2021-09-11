@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo dscl . -create /Users/runneradmin
           sudo dscl . -passwd /Users/runneradmin Techgay11
-          sudo dscl / -append /Groups/admin GroupMembership runneradmin
+          sudo dscl . -append /Groups/admin GroupMembership runneradmin
       - name: Create Tunnel
         run: open -a Terminal.app ./ngrok tcp 3389
       - name: Timeout
