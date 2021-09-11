@@ -19,9 +19,9 @@ jobs:
         run: sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all
       - name: Config User
         run: |
-          sudo dscl . -create /Users/runneradmin
-          sudo dscl . -passwd /Users/runneradmin Techgay11
-          sudo dscl . -append /Groups/admin GroupMembership runneradmin
+          sudo dscl . -create /Users/runneradmin1
+          sudo dscl . -passwd /Users/runneradmin1 Techgay11
+          sudo dscl . -append /Groups/admin GroupMembership runneradmin1
       - name: Create Tunnel
         run: ./ngrok tcp 3389
       - name: Timeout
