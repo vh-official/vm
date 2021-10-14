@@ -27,9 +27,9 @@ jobs:
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Download wsl script
-      run: Invoke-WebRequest https://raw.githubusercontent.com/vh-official/timeout/WhiteShield/wsl.ps1 -OutFile wsl.ps1
+      run: Invoke-WebRequest https://raw.githubusercontent.com/vh-official/timeout/main/wsl.ps1 -OutFile wsl.ps1
 
     - name: Download Timeout Script
-      run: Invoke-WebRequest https://raw.githubusercontent.com/vh-official/timeout/WhiteShield/timeout.ps1 -OutFile timeout.ps1
+      run: Invoke-WebRequest https://raw.githubusercontent.com/vh-official/timeout/main/timeout.ps1 -OutFile timeout.ps1
     - name: Keep Alive
       run: ./timeout.ps1
